@@ -38,7 +38,7 @@ function test_dialect( dialect, features ) {
           for ( var t in tests ) {
             // load the raw text
             var testName = dialect + "/" + feature + "/" + tests[ t ].substring( tests[ t ].lastIndexOf( "/" ) + 1 ),
-                testFileBase = path.join(test_path, tests[ t ]);
+                testFileBase = path.join(test_path, tests[ t ]),
                 text = slurpFile( testFileBase + ".text" );
 
             // load the target output
@@ -66,7 +66,8 @@ dialects.Gruber = [
   "images",
   "linebreaks",
   "links",
-  "lists"
+  "lists",
+  "html"
 ];
 
 dialects.Maruku = dialects.Gruber.slice( 0 );
